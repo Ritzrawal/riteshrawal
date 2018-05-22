@@ -1,0 +1,77 @@
+<center>
+<div class="a" onclick="event.stopPropagation();">
+<div class="b" onclick="event.stopPropagation();">
+<div class="c" onclick="event.stopPropagation();">
+<div class="d" onclick="event.stopPropagation();">
+</div>
+</div>
+</div>
+</div>
+</center>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    $('.a').click(function(){
+        swal("Good job!","YELLOW!","sucess");
+       })
+</script>
+
+<script>
+    $('.b').click(function(){
+        swal("Good job!","BLUE!","sucess");
+       })
+</script>
+
+<script>
+    $('.c').click(function(){
+        swal("Good job!","RED!","sucess");
+       })
+</script>
+
+<script>
+    $('.d').click(function(){
+        swal("Good job!","GREEN!","sucess");
+       })
+</script>
+
+<style>
+
+
+.a{
+position:relative;
+width:500px;
+height:500px;
+background-color:yellow;
+border-radius:50%;
+margin:100px 0px 0px 100px
+}
+
+.b{
+position:absolute;
+width:300px;
+height:300px;
+background-color:blue;
+border-radius:50%;
+margin:100px 0px 0px 100px;
+}
+
+.c{
+position:absolute;
+width:200px;
+height:200px;
+background-color:red;
+border-radius:50%;
+margin:50px 0px 0px 50px;
+}
+.d{
+position:absolute;
+width:100px;
+height:100px;
+background-color:green;
+border-radius:50%;
+margin:50px 0px 0px 50px;
+}
+</style>
+</body>
+</html>
+
