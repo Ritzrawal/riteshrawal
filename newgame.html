@@ -40,6 +40,7 @@ Array.prototype.memory_tile_shuffle = function(){
         this[i] = temp;
     }
 }
+
 function newBoard(){
 	tiles_flipped = 0;
 	var output = '';
@@ -48,9 +49,10 @@ function newBoard(){
 		output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
 	}
 	document.getElementById('memory_board').innerHTML = output;
-	document.getElementById('memory-array').innerHTML = output;
-	
+	// document.getElementById('memory-array').innerHTML = output;
+
 }
+
 function memoryFlipTile(tile,val){
 	if(tile.innerHTML == "" && memory_values.length < 2){
 		tile.style.background = 'red';
@@ -71,6 +73,7 @@ function memoryFlipTile(tile,val){
 					newBoard();
 				}
 			} else {
+				 
 				function flip2Back(){
 
 				    var tile_1 = document.getElementById(memory_tile_ids[0]);
