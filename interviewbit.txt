@@ -1,14 +1,9 @@
 //swap the greatest number
-
-
 var arr=[20,50,113];
 for(i=0;i<arr.length;i++){
-
-
 if(arr[i+2]>arr[i+1])
 {
-  
-  var tem=arr[i+1];
+   var tem=arr[i+1];
   arr[i+1]=arr[i+2];
   arr[i+2]=tem;
   
@@ -18,8 +13,8 @@ else{
 }
 }
 
-//Repeat and Missing Number Array
 
+//Repeat and Missing Number Array
 var app=[1,2,3,4,2];
 var arr=app.sort((a,b)=>a-b);
 var rawal=[];
@@ -39,10 +34,12 @@ var rawal=[];
   }
   (rawal);
 
+
 //largest number formed
 var d=[2,30,56,90];
 let e=d.join("").split("").sort((a,b)=>b-a).join("");
 parseInt(e);
+
 
 //common interval in array:
 var arr=[1,10,30,40];
@@ -223,6 +220,7 @@ function Row(arr) {
 
 console.log(Row(3));
 
+
 ///Pascal Triangle 
 
 function PascalTriangle(Rows)
@@ -245,6 +243,7 @@ function PascalTriangle(Rows)
 }
 
 console.log(PascalTriangle(7));
+
 
 //Max Sum Contiguous Subarray
 
@@ -301,6 +300,8 @@ arr = [7, 3,2, 6, 2,3,2,2];
 n = arr.length;
 console.log(nby3(arr, n));
 
+
+
 //Max subArray//output 6
 
 function maxarray(a,size){
@@ -320,6 +321,7 @@ function maxarray(a,size){
 }
 var a=[-2,1,-3,4,-1,2,1,-5,4];
 console.log(maxarray(a,a.length));
+
 
 
 //Longest Subarray of non-nagitive
@@ -345,6 +347,7 @@ res = Math.max(res, count);
 arr= [1, 0, 4, 0, 1, -1, -1, 0, 0, 1, 0];
 n = arr.length;
 console.log(longestSubarry(arr, n));
+
 
 //Pyrimd Problem
 
