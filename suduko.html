@@ -164,8 +164,8 @@ function squareValidate(obj){
     var aID = new Array();
     var aIJ = identity(obj.id);
     var valor;
-    squareCoord.push(Math.floor(aIJ[0]/3)); // Cuadrícula en filas: 0,1,2
-    squareCoord.push(Math.floor(aIJ[1]/3)); // Cuadrícula en columnas: 0,1,2
+    squareCoord.push(Math.floor(aIJ[0]/3)); 
+    squareCoord.push(Math.floor(aIJ[1]/3));
     for(var i=0;i<3;i++){
         for(var j=0;j<3;j++){
         aID = display(squareCoord[0]*3+Number(i),squareCoord[1]*3+Number(j));
@@ -180,7 +180,6 @@ function squareValidate(obj){
 function errores(text,obj){
     obj = ('innerHTML' in obj)? obj: obj.target;
     text = text || "Error general";
-    //alert(text);
     obj.innerHTML = '';
     document.getElementById('motivo').innerHTML = text;
 }
@@ -193,23 +192,23 @@ function keyUp(obj){
     if(teclaNoValida) {
         teclaNoValida = 0;
         obj.target.innerHTML = numberInCell;
-        throw new Error("Pulsó intro o tab");
+        throw new Error("PulsÃ³ intro o tab");
     }
     document.getElementById('motivo').innerHTML = '';
     verificarNumero(obj);
     errorUsuario += ponerColor(obj);
     imprimeErrores();
     if(hasGanado()){
-        document.getElementById('motivo').innerHTML = '<span id="ganado">¡¡ENHORABUENA!! ¡¡HAS GANADO!!</span>';
+        document.getElementById('motivo').innerHTML = '<span id="ganado">Â¡Â¡ENHORABUENA!! Â¡Â¡HAS GANADO!!</span>';
     }
 }
 function obviarTeclasEsp(obj){
     var code = ('which' in obj) ? obj.which : obj.keyCode;
     obj = ('innerHTML' in obj)? obj: obj.target;
     var texto;
-    if(code == 13 || code == 9) { //Enter code o tab
+    if(code == 13 || code == 9) { 
         teclaNoValida++;
-        texto = 'No pulses enter ni tab. Había un ' + numberInCell;
+        texto = 'No pulses enter ni tab. HabÃ­a un ' + numberInCell;
         document.getElementById('motivo').innerHTML = texto;
         obj.innerHTML = numberInCell;
         return 1;
@@ -285,7 +284,7 @@ function imprimeSudoku(visible){
         text += salto;
     }
     if(visible) {
-        text += '<!-- Iteración ' + iteracion + ' --'+'>';
+        text += '<!-- IteraciÃ³n ' + iteracion + ' --'+'>';
     }else {
         text = '<!-- Iteracion: '+ iteracion + '\n\n' + text + ' --'+'>';
     }
@@ -314,7 +313,6 @@ function rellenarFila(indice_i){
         }else{
             j++;
             if(j >= aleatorios.length){
-                //sudoku[indice_i][indiceRellenar[1]] = numero;
                 indiceRellenar[1]++;
                 j = 0;
             }
@@ -362,8 +360,8 @@ function columnTest(indices,valor){
 function squareTest(indices,valor){
     var squareCoord = new Array();
     var aID = new Array();
-    squareCoord.push(Math.floor(indices[0]/3)); // Cuadrícula en filas: 0,1,2
-    squareCoord.push(Math.floor(indices[1]/3)); // Cuadrícula en columnas: 0,1,2
+    squareCoord.push(Math.floor(indices[0]/3)); 
+    squareCoord.push(Math.floor(indices[1]/3)); 
     for(var i=0;i<3;i++){
         for(var j=0;j<3;j++){
             aID = [squareCoord[0]*3+Number(i),squareCoord[1]*3+Number(j)];
